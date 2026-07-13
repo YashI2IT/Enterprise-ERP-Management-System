@@ -16,7 +16,8 @@ import {
   Moon,
   Library,
   Building,
-  Bus
+  Bus,
+  Archive
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
@@ -59,6 +60,9 @@ const DashboardLayout = () => {
     { name: 'Transport', path: '/dashboard/transport', icon: Bus },
     { name: 'Bus Routes', path: '/dashboard/transport/routes', icon: Bus },
     { name: 'Transport Allocation', path: '/dashboard/transport/allocations', icon: Bus },
+    { name: 'Inventory', path: '/dashboard/inventory', icon: Archive },
+    { name: 'Manage Catalog', path: '/dashboard/inventory/items', icon: Archive },
+    { name: 'Asset Lending', path: '/dashboard/inventory/assignments', icon: Archive },
     { name: 'Exams', path: '/dashboard/academic/exams', icon: GraduationCap },
     { name: 'Results', path: '/dashboard/academic/results', icon: GraduationCap },
     { name: 'Timetable', path: '/dashboard/academic/timetable', icon: GraduationCap },

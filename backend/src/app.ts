@@ -55,6 +55,7 @@ import libraryRoutes from './routes/library.routes';
 import academicRoutes from './routes/academic.routes';
 import hostelRoutes from './routes/hostel.routes';
 import transportRoutes from './routes/transport.routes';
+import inventoryRoutes from './routes/inventory.routes';
 
 // Routes
 app.use('/api/v1/auth', authRoutes);
@@ -66,6 +67,7 @@ app.use('/api/v1/library', libraryRoutes);
 app.use('/api/v1/academic', academicRoutes);
 app.use('/api/v1/hostels', hostelRoutes);
 app.use('/api/v1/transport', transportRoutes);
+app.use('/api/v1/inventory', inventoryRoutes);
 
 app.get('/api/v1/health', (req, res) => {
   res.status(200).json({ status: 'success', message: 'API is running' });

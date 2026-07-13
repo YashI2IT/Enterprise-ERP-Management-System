@@ -25,6 +25,9 @@ import RoomAllocation from './pages/hostel/RoomAllocation';
 import TransportDashboard from './pages/transport/TransportDashboard';
 import RouteManagement from './pages/transport/RouteManagement';
 import TransportAllocations from './pages/transport/TransportAllocations';
+import InventoryDashboard from './pages/inventory/InventoryDashboard';
+import ItemManagement from './pages/inventory/ItemManagement';
+import AssetAssignments from './pages/inventory/AssetAssignments';
 
 const queryClient = new QueryClient();
 
@@ -63,6 +66,9 @@ function App() {
               <Route path="transport" element={<TransportDashboard />} />
               <Route path="transport/routes" element={<RouteManagement />} />
               <Route path="transport/allocations" element={<TransportAllocations />} />
+              <Route path="inventory" element={<InventoryDashboard />} />
+              <Route path="inventory/items" element={<ItemManagement />} />
+              <Route path="inventory/assignments" element={<AssetAssignments />} />
             </Route>
 
             {/* Fallback route */}
