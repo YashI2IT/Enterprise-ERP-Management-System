@@ -11,6 +11,9 @@ import ProtectedRoute from './components/layout/ProtectedRoute';
 import StudentsList from './pages/students/StudentsList';
 import StaffList from './pages/staff/StaffList';
 import Attendance from './pages/attendance/Attendance';
+import FeesDashboard from './pages/finance/FeesDashboard';
+import FeeStructures from './pages/finance/FeeStructures';
+import StudentFees from './pages/finance/StudentFees';
 
 const queryClient = new QueryClient();
 
@@ -35,6 +38,9 @@ function App() {
               <Route path="students" element={<StudentsList />} />
               <Route path="staff" element={<StaffList />} />
               <Route path="attendance" element={<Attendance />} />
+              <Route path="fees" element={<FeesDashboard />} />
+              <Route path="fees/structures" element={<FeeStructures />} />
+              <Route path="fees/students" element={<StudentFees />} />
             </Route>
 
             {/* Fallback route */}

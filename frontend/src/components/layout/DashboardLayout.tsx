@@ -8,10 +8,12 @@ import {
   LayoutDashboard, 
   Users, 
   GraduationCap, 
-  LogOut, 
+  CalendarDays,
   Menu,
-  Moon,
-  Sun
+  LogOut,
+  IndianRupee,
+  Sun,
+  Moon
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
@@ -46,7 +48,8 @@ const DashboardLayout = () => {
     { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
     { name: 'Students', path: '/dashboard/students', icon: GraduationCap },
     { name: 'Staff', path: '/dashboard/staff', icon: Users },
-    { name: 'Attendance', path: '/dashboard/attendance', icon: Menu },
+    { name: 'Attendance', path: '/dashboard/attendance', icon: CalendarDays },
+    { name: 'Finance & Fees', path: '/dashboard/fees', icon: IndianRupee },
   ];
 
   return (
