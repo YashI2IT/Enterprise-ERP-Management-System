@@ -95,7 +95,7 @@ const Attendance = () => {
               <Input 
                 type="date" 
                 value={date} 
-                onChange={(e) => setDate(e.target.value)} 
+                onChange={(e: any) => setDate(e.target.value)} 
                 className="w-48"
               />
             </div>
@@ -104,7 +104,7 @@ const Attendance = () => {
               <Input 
                 placeholder="e.g. 10" 
                 value={grade} 
-                onChange={(e) => setGrade(e.target.value)} 
+                onChange={(e: any) => setGrade(e.target.value)} 
                 className="w-32"
               />
             </div>
@@ -113,7 +113,7 @@ const Attendance = () => {
               <Input 
                 placeholder="e.g. A" 
                 value={section} 
-                onChange={(e) => setSection(e.target.value)} 
+                onChange={(e: any) => setSection(e.target.value)} 
                 className="w-32"
               />
             </div>

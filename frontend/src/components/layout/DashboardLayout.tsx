@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../store';
+import type { RootState } from '../../store';
 import { logout } from '../../store/slices/authSlice';
 import api from '../../services/api';
 import { 
@@ -92,7 +92,7 @@ const DashboardLayout = () => {
               <Menu size={20} />
             </Button>
             <h2 className="text-lg font-medium hidden sm:block">
-              Welcome, {user?.firstName}
+              Welcome, {(user as any)?.firstName}
             </h2>
           </div>
           
@@ -103,7 +103,7 @@ const DashboardLayout = () => {
             
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-medium">
-                {user?.firstName?.[0]}{user?.lastName?.[0]}
+                {(user as any)?.firstName?.[0]}{(user as any)?.lastName?.[0]}
               </div>
               <Button variant="ghost" size="icon" onClick={handleLogout} title="Logout">
                 <LogOut size={20} />
