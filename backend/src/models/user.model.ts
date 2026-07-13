@@ -78,15 +78,9 @@ const userSchema = new Schema<IUser>(
 );
 
 // Hash password before saving
-userSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next();
-
-  try {
-    this.password = await argon2.hash(this.password as string);
-    next();
-  } catch (err) {
-    next(err as Error);
-  }
+userSchema.pre('save', async function () {
+  if (!this.isModified('password')) return;
+  this.password = await argon2.hash(this.password as string);
 });
 
 // Compare password method

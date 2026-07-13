@@ -47,7 +47,7 @@ export const getAttendanceByClassAndDate = async (req: Request, res: Response, n
     const attendanceDate = new Date(date as string);
     attendanceDate.setHours(0, 0, 0, 0);
 
-    let attendance = await StudentAttendance.findOne({ date: attendanceDate, grade, section })
+    let attendance = await StudentAttendance.findOne({ date: attendanceDate, grade, section } as any)
       .populate('markedBy', 'firstName lastName')
       .populate('records.student', 'admissionNumber user')
       .populate({
@@ -60,7 +60,7 @@ export const getAttendanceByClassAndDate = async (req: Request, res: Response, n
 
     // If attendance not found for the date, return the list of students for that class so UI can render the form
     if (!attendance) {
-      const students = await StudentProfile.find({ currentGrade: grade, section })
+      const students = await StudentProfile.find({ currentGrade: grade, section } as any)
         .populate('user', 'firstName lastName')
         .sort({ 'user.firstName': 1 });
 
