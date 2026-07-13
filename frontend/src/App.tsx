@@ -22,6 +22,9 @@ import ExamResults from './pages/academic/ExamResults';
 import ClassTimetable from './pages/academic/ClassTimetable';
 import HostelDashboard from './pages/hostel/HostelDashboard';
 import RoomAllocation from './pages/hostel/RoomAllocation';
+import TransportDashboard from './pages/transport/TransportDashboard';
+import RouteManagement from './pages/transport/RouteManagement';
+import TransportAllocations from './pages/transport/TransportAllocations';
 
 const queryClient = new QueryClient();
 
@@ -57,6 +60,9 @@ function App() {
               <Route path="academic/timetable" element={<ClassTimetable />} />
               <Route path="hostels" element={<HostelDashboard />} />
               <Route path="hostels/rooms" element={<RoomAllocation />} />
+              <Route path="transport" element={<TransportDashboard />} />
+              <Route path="transport/routes" element={<RouteManagement />} />
+              <Route path="transport/allocations" element={<TransportAllocations />} />
             </Route>
 
             {/* Fallback route */}
